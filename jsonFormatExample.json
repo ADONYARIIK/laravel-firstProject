@@ -1,103 +1,37 @@
 {
-  "personal": {
-    "first_name": "",
-    "last_name": "",
-    "position": "",
-    "email": "",
-    "phone": "",
-    "address": "",
-    "website": "",
-    "linkedin": "",
-    "github": "",
-    "photo": ""
-  },
-
-  "summary": "",
-
-  "experience": [
-    {
-      "company": "",
-      "position": "",
-      "location": "",
-      "start_date": "",
-      "end_date": "",
-      "currently_working": false,
-      "description": [
-        "",
-        ""
-      ]
-    }
-  ],
-
-  "education": [
-    {
-      "institution": "",
-      "degree": "",
-      "field": "",
-      "start_date": "",
-      "end_date": "",
-      "description": ""
-    }
-  ],
-
-  "skills": {
-    "technical": [
-      "",
-      ""
+    "personal": {
+        "name": {
+            "first": "",
+            "last": ""
+        },
+        "position": "",
+        "photo": "",
+        "summary": "",
+        "contacts": [],
+        "links": []
+    },
+    "skills": [
+        {
+            "title": "Technical Skills",
+            "type": "tags",
+            "items": []
+        },
+        {
+            "title": "Soft Skills",
+            "type": "tags",
+            "items": []
+        },
+        {
+            "title": "Languages",
+            "type": "levels",
+            "items": []
+        }
     ],
-    "soft": [
-      "",
-      ""
-    ],
-    "languages": [
-      {
-        "language": "",
-        "level": ""
-      }
-    ]
-  },
-
-  "projects": [
-    {
-      "name": "",
-      "description": "",
-      "technologies": [
-        ""
-      ],
-      "url": "",
-      "github": ""
-    }
-  ],
-
-  "certificates": [
-    {
-      "name": "",
-      "issuer": "",
-      "date": "",
-      "url": ""
-    }
-  ],
-
-  "courses": [
-    {
-      "name": "",
-      "provider": "",
-      "date": ""
-    }
-  ],
-
-  "interests": [
-    "",
-    ""
-  ],
-
-  "references": [
-    {
-      "name": "",
-      "position": "",
-      "company": "",
-      "email": "",
-      "phone": ""
-    }
-  ]
+    "experience": [],
+    "education": [],
+    "projects": [],
+    "certificates": [],
+    "courses": [],
+    "interests": [],
+    "references": []
 }
