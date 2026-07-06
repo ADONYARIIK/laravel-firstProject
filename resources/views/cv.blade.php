@@ -11,6 +11,9 @@
 <body>
     <h1 class="text-3xl font-bold underline">
         CV Page
+        @php
+            dump($data);
+        @endphp
     </h1>
 </body>
 
