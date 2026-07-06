@@ -26,6 +26,10 @@
 
 <body class="bg-slate-100">
 
+    <a href="{{ url()->current() }}/download" target="_blank" title="Download PDF" label="Download PDF" class="inline-block bg-slate-800 text-white px-4 py-2 rounded-md hover:bg-slate-600 transition">
+        Download in PDF
+    </a>
+
     <div class="max-w-7xl mx-auto lg:my-10 bg-white shadow-2xl">
 
         {{-- ========================= HEADER ========================= --}}
