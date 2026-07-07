@@ -1,83 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CV Builder
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple Laravel application for displaying and exporting a Curriculum Vitae (CV). The application renders CV data stored in a JSON file using Blade templates and Tailwind CSS, and supports PDF generation using DomPDF.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-
-# Deployment Guide
-
-This document explains how to deploy the application in a local or production environment.
+* Display a responsive CV in the browser
+* Store CV data in a JSON file
+* Generate a printable PDF version of the CV
+* Easy to customize and extend
+* Feature tests for the main page
 
 ---
 
-# Prerequisites
+# Tech Stack
 
-Ensure the target environment meets the following requirements.
+* PHP 8.2+
+* Laravel 12
+* Blade
+* Tailwind CSS
+* Laravel Sail (Docker)
+* Barryvdh/Laravel-Dompdf
+* PHPUnit
 
-## Software Requirements
+---
 
-- PHP **8.2+**
-- Composer **2.x**
-- Node.js **20+**
-- npm
-- MySQL
-- Git
+# Project Structure
 
-# Clone the Repository
+```
+app/
+resources/
+├── views/
+│   ├── cv.blade.php
+│   └── pdf.blade.php
+storage/
+tests/
+```
+
+---
+
+# Getting Started
+
+## Clone the repository
 
 ```bash
 git clone <repository-url>
@@ -86,285 +49,209 @@ cd <project-directory>
 
 ---
 
-# Install Dependencies
+## Install PHP dependencies
 
-## PHP Dependencies
+Using Laravel Sail:
 
 ```bash
-sail composer install
+./vendor/bin/sail composer install
 ```
 
-## JavaScript Dependencies
+Or locally:
 
 ```bash
-sail npm install
-```
-
-Build frontend assets:
-
-```bash
-sail npm run build
-```
-
-For local development:
-
-```bash
-sail npm run dev
+composer install
 ```
 
 ---
 
-# Environment Configuration
+## Install JavaScript dependencies
 
-Create the environment file:
+Using Sail:
+
+```bash
+./vendor/bin/sail npm install
+```
+
+Or locally:
+
+```bash
+npm install
+```
+
+---
+
+## Configure the environment
+
+Copy the example environment file:
 
 ```bash
 cp .env.example .env
 ```
 
-Update the `.env` file with your environment-specific configuration.
-
-## Application
-
-```env
-APP_NAME=Laravel
-APP_ENV=production
-APP_KEY=
-APP_DEBUG=false
-APP_URL=https://your-domain.com
-```
-
-Generate the application key:
+Generate an application key:
 
 ```bash
 php artisan key:generate
 ```
 
----
-
-## Database
+Configure the database inside `.env`:
 
 ```env
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
+DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=database_name
-DB_USERNAME=username
+DB_DATABASE=laravel
+DB_USERNAME=sail
 DB_PASSWORD=password
 ```
 
 ---
 
-## Cache & Session
-
-Example:
-
-```env
-CACHE_STORE=file
-SESSION_DRIVER=file
-QUEUE_CONNECTION=database
-```
-
-Adjust these values according to your infrastructure.
-
----
-
-## Mail
-
-Example configuration:
-
-```env
-MAIL_MAILER=smtp
-MAIL_HOST=
-MAIL_PORT=
-MAIL_USERNAME=
-MAIL_PASSWORD=
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=
-MAIL_FROM_NAME="${APP_NAME}"
-```
-
----
-
-# Database Setup
-
-Run all migrations:
+## Run database migrations
 
 ```bash
 php artisan migrate
 ```
 
-If seeders are available:
+---
+
+## Build frontend assets
+
+Development:
 
 ```bash
-php artisan db:seed
+npm run dev
 ```
 
-Or both:
+Production:
 
 ```bash
-php artisan migrate --seed
+npm run build
 ```
 
 ---
 
-# Storage
+## Start the application
 
-Create the storage symlink:
+Using Sail:
 
 ```bash
-php artisan storage:link
+./vendor/bin/sail up -d
+```
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+The application will be available at:
+
+```
+http://localhost:8000
 ```
 
 ---
 
-# Cache Optimization
+# Updating the CV
 
-For production environments:
+The CV content is loaded from a JSON data file.
 
-Cache configuration:
-
-```bash
-php artisan config:cache
-```
-
-Cache routes:
-
-```bash
-php artisan route:cache
-```
-
-Cache views:
-
-```bash
-php artisan view:cache
-```
-
-Optimize the application:
-
-```bash
-php artisan optimize
-```
-
----
-
-# File Permissions
-
-Ensure Laravel can write to the following directories:
+Open the data file and edit its contents:
 
 ```
-storage/
-bootstrap/cache/
+storage/app/cv.json
 ```
+
+(or whichever file your application uses.)
+
+The JSON contains sections such as:
+
+* Personal Information
+* Contacts
+* Social Links
+* Skills
+* Experience
+* Education
+* Projects
+* Certificates
+* Courses
+* Interests
+* References
 
 Example:
 
+```json
+{
+  "personal": {
+    "name": {
+      "first": "John",
+      "last": "Doe"
+    },
+    "position": "Full Stack Developer"
+  }
+}
+```
+
+After modifying the JSON file, refresh the page to see the changes.
+
+---
+
+# Generating the PDF
+
+Open the main CV page:
+
+```
+/
+```
+
+Download the PDF:
+
+```
+/download
+```
+
+The PDF version uses a simplified Blade template optimized for DomPDF.
+
+---
+
+# Running Tests
+
+Run all tests:
+
 ```bash
-chmod -R 775 storage bootstrap/cache
+php artisan test
+```
+
+Run a specific test:
+
+```bash
+php artisan test --filter=CvPageTest
 ```
 
 ---
 
-# Queue Workers (Optional)
+# Deployment
 
-If the application uses queues:
+Deployment instructions are available in:
 
-```bash
-php artisan queue:work
+```
+DEPLOYMENT.md
 ```
 
-For production, use Supervisor or another process manager.
+The deployment guide includes:
+
+* System requirements
+* Environment configuration
+* Database setup
+* Storage configuration
+* Cache optimization
+* Queue workers
+* Production checklist
 
 ---
 
-# Scheduler (Optional)
+# License
 
-If scheduled tasks are used, configure a cron job:
-
-```cron
-* * * * * php /path/to/project/artisan schedule:run >> /dev/null 2>&1
-```
-
----
-
-# Verify the Deployment
-
-Check that:
-
-- The application loads successfully.
-- Database connection works.
-- Migrations have been applied.
-- Uploaded files are accessible.
-- Queue workers are running (if used).
-- Scheduled tasks execute correctly (if used).
-
----
-
-# Useful Artisan Commands
-
-Generate application key:
-
-```bash
-php artisan key:generate
-```
-
-Run migrations:
-
-```bash
-php artisan migrate
-```
-
-Run migrations with seeders:
-
-```bash
-php artisan migrate --seed
-```
-
-Clear all caches:
-
-```bash
-php artisan optimize:clear
-```
-
-Optimize application:
-
-```bash
-php artisan optimize
-```
-
-Create storage link:
-
-```bash
-php artisan storage:link
-```
-
-Start queue worker:
-
-```bash
-php artisan queue:work
-```
-
-Run scheduled tasks manually:
-
-```bash
-php artisan schedule:run
-```
-
----
-
-# Production Deployment Checklist
-
-- [ ] Clone the repository
-- [ ] Install Composer dependencies
-- [ ] Install Node.js dependencies
-- [ ] Build frontend assets
-- [ ] Configure the `.env` file
-- [ ] Generate the application key
-- [ ] Configure the database
-- [ ] Run migrations
-- [ ] Create the storage symlink
-- [ ] Cache configuration, routes, and views
-- [ ] Set correct file permissions
-- [ ] Configure queue workers (if applicable)
-- [ ] Configure scheduled tasks (if applicable)
-- [ ] Verify the application is working correctly
+This project is licensed under the MIT License.
