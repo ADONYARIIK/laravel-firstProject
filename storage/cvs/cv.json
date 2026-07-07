@@ -1,0 +1,217 @@
+{
+    "personal": {
+        "name": {
+            "first": "John",
+            "last": "Doe"
+        },
+        "position": "Full Stack Developer",
+        "photo": "https://example.com/images/john-doe.jpg",
+        "summary": "Passionate Full Stack Developer with 5+ years of experience building scalable web applications using Laravel, Vue.js and cloud technologies.",
+        "contacts": [
+            {
+                "type": "email",
+                "label": "Email",
+                "value": "john.doe@example.com"
+            },
+            {
+                "type": "phone",
+                "label": "Phone",
+                "value": "+1 555-123-4567"
+            },
+            {
+                "type": "location",
+                "label": "Location",
+                "value": "New York, NY, USA"
+            }
+        ],
+        "links": [
+            {
+                "title": "Website",
+                "icon": "globe",
+                "url": "https://johndoe.dev"
+            },
+            {
+                "title": "GitHub",
+                "icon": "github",
+                "url": "https://github.com/johndoe"
+            },
+            {
+                "title": "LinkedIn",
+                "icon": "linkedin",
+                "url": "https://linkedin.com/in/johndoe"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "title": "Technical Skills",
+            "type": "tags",
+            "items": [
+                "PHP",
+                "Laravel",
+                "JavaScript",
+                "TypeScript",
+                "Vue.js",
+                "Docker",
+                "MySQL",
+                "PostgreSQL",
+                "Redis",
+                "Linux",
+                "Git",
+                "REST API"
+            ]
+        },
+        {
+            "title": "Soft Skills",
+            "type": "tags",
+            "items": [
+                "Communication",
+                "Leadership",
+                "Problem Solving",
+                "Teamwork",
+                "Time Management"
+            ]
+        },
+        {
+            "title": "Languages",
+            "type": "levels",
+            "items": [
+                {
+                    "name": "English",
+                    "level": "C1"
+                },
+                {
+                    "name": "Spanish",
+                    "level": "B1"
+                }
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "company": "Tech Solutions Inc.",
+            "position": "Junior PHP Developer",
+            "location": "New York, NY",
+            "start_date": "2019-06",
+            "end_date": "2021-03",
+            "currently_working": false,
+            "highlights": [
+                "Developed internal CRM modules using Laravel.",
+                "Optimized SQL queries.",
+                "Worked with Git Flow.",
+                "Participated in code reviews."
+            ]
+        },
+        {
+            "company": "InnovateSoft",
+            "position": "Full Stack Developer",
+            "location": "Remote",
+            "start_date": "2021-04",
+            "end_date": null,
+            "currently_working": true,
+            "highlights": [
+                "Developed REST APIs.",
+                "Created Vue.js dashboards.",
+                "Configured Docker environments.",
+                "Implemented CI/CD with GitHub Actions."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "State University of Technology",
+            "degree": "Bachelor",
+            "field": "Software Engineering",
+            "location": "New York",
+            "start_date": "2015-09",
+            "end_date": "2019-06",
+            "gpa": "3.9",
+            "achievements": [
+                "Graduated with honors",
+                "Dean's List"
+            ],
+            "description": "Focused on web development and distributed systems."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Task Manager",
+            "role": "Full Stack Developer",
+            "status": "Completed",
+            "start_date": "2022-01",
+            "end_date": "2022-05",
+            "description": "Collaborative task management platform.",
+            "technologies": [
+                "Laravel",
+                "Vue.js",
+                "Docker",
+                "MySQL"
+            ],
+            "url": "https://tasks.example.com",
+            "github": "https://github.com/johndoe/task-manager"
+        },
+        {
+            "name": "Portfolio",
+            "role": "Developer",
+            "status": "Live",
+            "start_date": "2023-01",
+            "end_date": null,
+            "description": "Personal portfolio website.",
+            "technologies": [
+                "Laravel",
+                "Tailwind CSS",
+                "Alpine.js"
+            ],
+            "url": "https://johndoe.dev",
+            "github": "https://github.com/johndoe/portfolio"
+        }
+    ],
+    "certificates": [
+        {
+            "name": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2023-05",
+            "credential_id": "AWS-123456789",
+            "expires_at": "2026-05",
+            "url": "https://aws.amazon.com/"
+        },
+        {
+            "name": "Oracle Java SE Professional",
+            "issuer": "Oracle",
+            "date": "2022-09",
+            "credential_id": "ORACLE-987654321",
+            "expires_at": null,
+            "url": "https://education.oracle.com/"
+        }
+    ],
+    "courses": [
+        {
+            "name": "Laravel From Scratch",
+            "provider": "Laracasts",
+            "date": "2022-02",
+            "url": "https://laracasts.com/"
+        },
+        {
+            "name": "Docker & Kubernetes",
+            "provider": "Udemy",
+            "date": "2023-01",
+            "url": "https://udemy.com/"
+        }
+    ],
+    "interests": [
+        "Open Source",
+        "Photography",
+        "Chess",
+        "Cycling",
+        "Travel"
+    ],
+    "references": [
+        {
+            "name": "Jane Smith",
+            "position": "Engineering Manager",
+            "company": "InnovateSoft",
+            "email": "jane.smith@example.com",
+            "phone": "+1 555-987-6543"
+        }
+    ]
+}
